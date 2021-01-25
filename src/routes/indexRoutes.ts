@@ -1,9 +1,8 @@
 import {Router} from 'express';
+import usuarios from './moduloTest/moduloTestRoutes';
 const router = Router();
 
-import {getUsers} from '../controller/userController';
-
-router.get('/users', getUsers);
+router.use('/modulotest', usuarios);
 /*router.get('/users/:id', );
 router.post('/users', );
 router.put('/users', );

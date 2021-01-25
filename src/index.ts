@@ -1,6 +1,5 @@
 import 'reflect-metadata';
 import express from 'express';
-import morgan from 'morgan';
 import cors from 'cors';
 import indexRoutes from './routes/indexRoutes';
 import { createConnection } from 'typeorm';
@@ -10,7 +9,6 @@ createConnection();
 
 // middlewares
 app.use(cors());
-app.use(morgan('dev'));
 app.use(express.json());
 
 // routes
